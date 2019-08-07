@@ -1,0 +1,31 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TurtlePost",
+	"patterns": [
+		{"include": "#operations"},{"include": "#strings"},{"include":"#numbers"}
+	],
+	"repository": {
+		"operations": {
+			"patterns": [{
+				"name": "keyword.control.tpost",
+				"match": "\\b(add|sub|mul|div|mod|write|push|print|println|input|dup|drop|swap|not|and|or|xor|eq|gt|lt|gte|lte|string|parse|jump|call|jumpif|callif|ret|exit|nop|help)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.tpost",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tpost",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"name": "constant.numeric.tpost",
+			"match": "\\b(\\d(e|E)(\\+|\\-)?\\d)|\\d|(\\.\\d)\\b"
+		}
+	},
+	"scopeName": "source.tpost"
+}

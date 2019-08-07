@@ -1,0 +1,25 @@
+{
+    "name": "tpost-vscode",
+    "displayName": "TurtlePost Syntax",
+    "description": "Syntax Highlighting for TurtlePost",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tpost",
+            "aliases": ["TurtlePost", "tpost"],
+            "extensions": [".tpost"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tpost",
+            "scopeName": "source.tpost",
+            "path": "./syntaxes/tpost.tmLanguage.json"
+        }]
+    }
+}
